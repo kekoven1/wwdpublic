@@ -1,7 +1,11 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
+<<<<<<< HEAD
   "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/4f6190e2895e09116663ef282d3ce1d8b35c032e. Slim by WWDP Team",
+=======
+  "copyright": "Taken from tgstation at commit https://github.com/tgstation/tgstation/commit/4f6190e2895e09116663ef282d3ce1d8b35c032e, equipped-OUTERCLOTHING-resomi made by svarshiksatanist (Discord)",
+>>>>>>> cc2f87abc37b710f24d5d6cdbe7acc8789d04591
   "size": {
     "x": 32,
     "y": 32
@@ -15,7 +19,11 @@
       "directions": 4
     },
     {
+<<<<<<< HEAD
       "name": "equipped-OUTERCLOTHING-body-slim",
+=======
+      "name": "equipped-OUTERCLOTHING-resomi",
+>>>>>>> cc2f87abc37b710f24d5d6cdbe7acc8789d04591
       "directions": 4
     },
     {

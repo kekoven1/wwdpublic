@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Sprited by Hülle#2562 (Discord) for Space Station 14. Slim by WWDP Team",
+  "copyright": "Sprited by Hülle#2562 (Discord) for Space Station 14, equipped-OUTERCLOTHING-resomi made by Pofitlo. Slim by WWDP Team",
   "size": {
     "x": 32,
     "y": 32
@@ -16,6 +16,10 @@
     },
     {
       "name": "equipped-OUTERCLOTHING-body-slim",
+      "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-resomi",
       "directions": 4
     },
     {

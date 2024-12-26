@@ -2,7 +2,12 @@
 {
   "version": 1,
   "license": "CC-BY-SA-4.0",
+<<<<<<< HEAD
   "copyright": "Made by WWDP team",
+=======
+  "copyright": "Made by WWDP team, equipped-OUTERCLOTHING-resomi made by Pofitlo",
+
+>>>>>>> cc2f87abc37b710f24d5d6cdbe7acc8789d04591
   "size": {
     "x": 32,
     "y": 32
@@ -25,6 +30,10 @@
     },
     {
       "name": "equipped-OUTERCLOTHING-vox",
+      "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-resomi",
       "directions": 4
     },
     {

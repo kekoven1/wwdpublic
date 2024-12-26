@@ -1,7 +1,11 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
+<<<<<<< HEAD
   "copyright": "Taken from tgstation https://github.com/tgstation/tgstation/blob/master/icons/mob/clothing/suit.dmi, harpy edit by VMSolidus. Slim by WWDP Team",
+=======
+  "copyright": "Taken from tgstation https://github.com/tgstation/tgstation/blob/master/icons/mob/clothing/suit.dmi, harpy edit by VMSolidus, equipped-OUTERCLOTHING-resomi made by Pofitlo",
+>>>>>>> cc2f87abc37b710f24d5d6cdbe7acc8789d04591
   "size": {
     "x": 32,
     "y": 32
@@ -21,6 +25,10 @@
     {
         "name": "equipped-OUTERCLOTHING-harpy",
         "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-resomi",
+      "directions": 4
     },
     {
       "name": "inhand-left",

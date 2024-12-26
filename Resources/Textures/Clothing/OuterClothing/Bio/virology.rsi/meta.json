@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-4.0",
-  "copyright": "Made by WWDP Team",
+  "copyright": "Made by WWDP Team, equipped-OUTERCLOTHING-resomi made by Pofitlo",
   "size": {
     "x": 32,
     "y": 32
@@ -19,7 +19,11 @@
       "directions": 4
     },
     {
+<<<<<<< HEAD
       "name": "equipped-OUTERCLOTHING-body-slim",
+=======
+      "name": "equipped-OUTERCLOTHING-resomi",
+>>>>>>> cc2f87abc37b710f24d5d6cdbe7acc8789d04591
       "directions": 4
     },
     {
