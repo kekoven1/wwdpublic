@@ -1,11 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-<<<<<<< HEAD
-  "copyright": "Taken from TGstation github https://github.com/tgstation/tgstation/commit/e89db4dd4f42377b0adafb06806a763314a89034 , edited by Alekshhh. Slim by WWDP Team",
-=======
-  "copyright": "Taken from TGstation github https://github.com/tgstation/tgstation/commit/e89db4dd4f42377b0adafb06806a763314a89034 , edited by Alekshhh, equipped-OUTERCLOTHING-resomi made by Pofitlo",
->>>>>>> cc2f87abc37b710f24d5d6cdbe7acc8789d04591
+  "copyright": "Taken from TGstation github https://github.com/tgstation/tgstation/commit/e89db4dd4f42377b0adafb06806a763314a89034 , edited by Alekshhh, equipped-OUTERCLOTHING-resomi made by Pofitlo. Slim by WWDP Team",
   "size": {
     "x": 32,
     "y": 32
@@ -19,11 +15,11 @@
       "directions": 4
     },
     {
-<<<<<<< HEAD
       "name": "equipped-OUTERCLOTHING-body-slim",
-=======
+      "directions": 4
+    },
+    {
       "name": "equipped-OUTERCLOTHING-resomi",
->>>>>>> cc2f87abc37b710f24d5d6cdbe7acc8789d04591
       "directions": 4
     },
     {

@@ -1,11 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-<<<<<<< HEAD
-  "copyright": "Taken from vg at commit https://github.com/vgstation-coders/vgstation13/commit/a16e41020a93479e9a7e2af343b1b74f7f2a61bd. Slim by WWDP Team",
-=======
-  "copyright": "Taken from vg at commit https://github.com/vgstation-coders/vgstation13/commit/a16e41020a93479e9a7e2af343b1b74f7f2a61bd, equipped-OUTERCLOTHING-resomi made by Pofitlo",
->>>>>>> cc2f87abc37b710f24d5d6cdbe7acc8789d04591
+  "copyright": "Taken from vg at commit https://github.com/vgstation-coders/vgstation13/commit/a16e41020a93479e9a7e2af343b1b74f7f2a61bd, equipped-OUTERCLOTHING-resomi made by Pofitlo. Slim by WWDP Team",
   "size": {
     "x": 32,
     "y": 32
@@ -19,15 +15,15 @@
       "directions": 4
     },
     {
-<<<<<<< HEAD
       "name": "equipped-OUTERCLOTHING-body-slim",
       "directions": 4
     },
     {
       "name": "equipped-OUTERCLOTHING-vox",
-=======
+      "directions": 4
+    },
+    {
       "name": "equipped-OUTERCLOTHING-resomi",
->>>>>>> cc2f87abc37b710f24d5d6cdbe7acc8789d04591
       "directions": 4
     },
     {
