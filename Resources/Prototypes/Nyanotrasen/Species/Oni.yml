@@ -8,6 +8,7 @@
   # WD EDIT START
   bodyTypes:
     - HumanNormal
+    - HumanSlim
   # WD EDIT END
   skinColoration: Hues
   maleFirstNames: names_oni_male

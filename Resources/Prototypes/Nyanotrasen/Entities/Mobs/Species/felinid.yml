@@ -84,6 +84,26 @@
         - Landmine
         - Mousetrap
         - SlipEntity
+  # WD EDIT START
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: jumpsuit
+      shoes-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: shoes
+      gloves-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: gloves
+  # WD EDIT END
+
 
 - type: entity
   save: false
@@ -95,3 +115,22 @@
   components:
   - type: HumanoidAppearance
     species: Felinid
+  # WD EDIT START
+  - type: Inventory
+    femaleDisplacements:
+      jumpsuit-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: jumpsuit
+      shoes-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: shoes
+      gloves-body-slim:
+        sizeMaps:
+          32:
+            sprite: _White/Mobs/Species/Human/displacement.rsi
+            state: gloves
+  # WD EDIT END

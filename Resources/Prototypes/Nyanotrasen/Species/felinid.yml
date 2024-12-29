@@ -6,6 +6,7 @@
   # WD EDIT START
   bodyTypes:
     - HumanNormal
+    - HumanSlim
   # WD EDIT END
   markingLimits: MobFelinidMarkingLimits
   dollPrototype: MobFelinidDummy
