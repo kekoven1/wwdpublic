@@ -6,6 +6,7 @@
   # WD EDIT START
   bodyTypes:
     - IPCNormal
+  defaultSkinTone: "#aaa9ad"
   # WD EDIT END
   markingLimits: MobIPCMarkingLimits
   dollPrototype: MobIPCDummy

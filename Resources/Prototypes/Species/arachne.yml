@@ -6,6 +6,7 @@
   # WD EDIT START
   bodyTypes:
     - ArachneNormal
+  defaultSkinTone: "#c0967f" # WD EDIT
   # WD EDIT END
   markingLimits: MobArachneMarkingLimits
   dollPrototype: MobArachneDummy

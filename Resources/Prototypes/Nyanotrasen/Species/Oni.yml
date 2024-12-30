@@ -9,6 +9,7 @@
   bodyTypes:
     - HumanNormal
     - HumanSlim
+  defaultSkinTone: "#c0967f"
   # WD EDIT END
   skinColoration: Hues
   maleFirstNames: names_oni_male

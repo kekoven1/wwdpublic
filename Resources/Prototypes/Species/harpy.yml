@@ -6,6 +6,7 @@
   # WD EDIT START
   bodyTypes:
     - HarpyNormal
+  defaultSkinTone: "#c0967f"
   # WD EDIT END
   markingLimits: MobHarpyMarkingLimits
   dollPrototype: MobHarpyDummy
