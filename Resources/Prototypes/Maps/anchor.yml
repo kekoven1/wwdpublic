@@ -2,8 +2,8 @@
   id: Anchor
   mapName: 'Anchor'
   mapPath: /Maps/anchor.yml
-  minPlayers: 20
-  maxPlayers: 90
+  minPlayers: 35
+  maxPlayers: 120
   fallback: true
   stations:
     Anchor:
@@ -22,20 +22,21 @@
           availableJobs:
             #service
             Captain: [ 1, 1 ]
-            BlueshieldOfficer: [ 1, 1]
-            NanotrasenRepresentative: [ 1, 1 ]
+            # BlueshieldOfficer: [ 1, 1] - WD EDIT
+            # NanotrasenRepresentative: [ 1, 1 ] - WD EDIT
             HeadOfPersonnel: [ 1, 1 ]
             Bartender: [ 1, 2 ]
             Botanist: [ 2, 4 ]
             Chef: [ 1, 2 ]
             Janitor: [ 2, 3 ]
             ServiceWorker: [ 2, 4 ]
-            Boxer: [ 2, 2 ]
+            # Boxer: [ 2, 2 ] - WD EDIT
             Clown: [ 1, 1 ]
             Lawyer: [ 2, 2 ]
             Reporter: [ 2, 2 ]
             Musician: [ 1, 1 ]
             Mime: [ 1, 1 ]
+            # Zookeeper: [ 1, 2 ] - WD EDIT
             #engineering
             ChiefEngineer: [ 1, 1 ]
             AtmosphericTechnician: [ 2, 3 ]
