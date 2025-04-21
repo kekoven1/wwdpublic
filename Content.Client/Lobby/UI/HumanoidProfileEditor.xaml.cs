@@ -2,13 +2,13 @@ using System.IO;
 using System.Linq;
 using System.Numerics;
 using Content.Client.Administration.UI;
-using Content.Client.Guidebook;
 using Content.Client.Humanoid;
 using Content.Client.Message;
 using Content.Client.Players.PlayTimeTracking;
 using Content.Client.UserInterface.Controls;
 using Content.Client.UserInterface.Systems.Guidebook;
 using Content.Shared._EE.Contractors.Prototypes;
+using Content.Shared._White;
 using Content.Shared._White.Humanoid.Prototypes;
 using Content.Shared.CCVar;
 using Content.Shared.Clothing.Components;
@@ -32,7 +32,6 @@ using Robust.Client.UserInterface.Controls;
 using Robust.Client.UserInterface.XAML;
 using Robust.Client.Utility;
 using Robust.Client.Player;
-using Robust.Shared;
 using Robust.Shared.Configuration;
 using Robust.Shared.Enums;
 using Robust.Shared.Map;
@@ -99,6 +98,7 @@ namespace Content.Client.Lobby.UI
         private bool _customizePronouns;
         private bool _customizeStationAiName;
         private bool _customizeBorgName;
+        private bool _customizeClownName; // WD EDIT
 
         public event Action<HumanoidCharacterProfile, int>? OnProfileChanged;
 
@@ -112,6 +112,11 @@ namespace Content.Client.Lobby.UI
 
         [ValidatePrototypeId<DatasetPrototype>]
         private const string CyborgNames = "names_borg";
+
+        // WD EDIT START
+        [ValidatePrototypeId<LocalizedDatasetPrototype>]
+        private const string ClownNames = "ClownNames";
+        // WD EDIT END
 
         public HumanoidProfileEditor(
             IClientPreferencesManager preferencesManager,
@@ -245,18 +250,26 @@ namespace Content.Client.Lobby.UI
 
             _customizeStationAiName = _cfgManager.GetCVar(CCVars.AllowCustomStationAiName);
             _customizeBorgName = _cfgManager.GetCVar(CCVars.AllowCustomCyborgName);
+            _customizeClownName = _cfgManager.GetCVar(WhiteCVars.AllowCustomClownName); // WD EDIT
 
             _cfgManager.OnValueChanged(CCVars.AllowCustomStationAiName, OnChangedStationAiNameCustomizationValue);
             _cfgManager.OnValueChanged(CCVars.AllowCustomCyborgName, OnChangedCyborgNameCustomizationValue);
+            _cfgManager.OnValueChanged(WhiteCVars.AllowCustomClownName, OnChangedClownNameCustomizationValue); // WD EDIT
 
             StationAINameEdit.OnTextChanged += args => { SetStationAiName(args.Text); };
             CyborgNameEdit.OnTextChanged += args => { SetCyborgName(args.Text); };
+            ClownNameEdit.OnTextChanged += args => { SetClownName(args.Text); }; // WD EDIT
 
             if (StationAiNameContainer.Visible != _customizeStationAiName)
                 StationAiNameContainer.Visible = _customizeStationAiName;
 
             if (CyborgNameContainer.Visible != _customizeBorgName)
                 CyborgNameContainer.Visible = _customizeBorgName;
+                
+            // WD EDIT START
+            if (ClownNameContainer.Visible != _customizeClownName)
+                ClownNameContainer.Visible = _customizeClownName;
+            // WD EDIT END
 
             #endregion
 
@@ -646,6 +659,14 @@ namespace Content.Client.Lobby.UI
             _customizeBorgName = newValue;
             CyborgNameContainer.Visible = newValue;
         }
+        
+        // WD EDIT START
+        private void OnChangedClownNameCustomizationValue(bool newValue)
+        {
+            _customizeClownName = newValue;
+            UpdateClownControls();
+        }
+        // WD EDIT END
 
         /// Refreshes the species selector
         public void RefreshSpecies()
@@ -915,6 +936,7 @@ namespace Content.Client.Lobby.UI
             UpdateDisplayPronounsControls();
             UpdateStationAiControls();
             UpdateCyborgControls();
+            UpdateClownControls(); // WD EDIT
             UpdateSkinColor();
             UpdateSpawnPriorityControls();
             UpdateFlavorTextEdit();
@@ -1481,9 +1503,16 @@ namespace Content.Client.Lobby.UI
         private void SetCyborgName(string? cyborgName)
         {
             Profile = Profile?.WithCyborgName(cyborgName);
-            ReloadPreview();
             IsDirty = true;
         }
+        
+        // WD EDIT START
+        private void SetClownName(string? clownName)
+        {
+            Profile = Profile?.WithClownName(clownName);
+            IsDirty = true;
+        }
+        // WD EDIT END
 
         private string GetFormattedPronounsFromGender()
         {
@@ -1822,6 +1851,23 @@ namespace Content.Client.Lobby.UI
             CyborgNameEdit.PlaceHolder = Loc.GetString(randomName);
         }
 
+        // WD EDIT START
+        private void UpdateClownControls()
+        {
+            if (Profile == null)
+                return;
+
+            ClownNameEdit.Text = Profile.ClownName ?? string.Empty;
+
+            if (ClownNameEdit.Text != string.Empty)
+                return;
+
+            var clownNames = _prototypeManager.Index<LocalizedDatasetPrototype>(ClownNames);
+            var randomName = _random.Pick(clownNames.Values);
+            ClownNameEdit.PlaceHolder = Loc.GetString(randomName);
+        }
+        // WD EDIT END
+
         private void UpdateSpawnPriorityControls()
         {
             if (Profile == null)
@@ -2116,6 +2162,10 @@ namespace Content.Client.Lobby.UI
         private void UpdateTraitPreferences()
         {
             var points = _cfgManager.GetCVar(CCVars.GameTraitsDefaultPoints);
+            var maxTraits = _cfgManager.GetCVar(CCVars.GameTraitsMax);
+            if (Profile is not null && _prototypeManager.TryIndex<SpeciesPrototype>(Profile.Species, out var speciesPrototype))
+                points += speciesPrototype.BonusTraitPoints;
+
             _traitCount = 0;
 
             foreach (var preferenceSelector in _traitPreferences)
@@ -2129,13 +2179,13 @@ namespace Content.Client.Lobby.UI
                     continue;
 
                 points += preferenceSelector.Trait.Points;
-                _traitCount += 1;
+                _traitCount += preferenceSelector.Trait.Slots;
             }
 
             TraitPointsBar.Value = points;
             TraitPointsLabel.Text = Loc.GetString("humanoid-profile-editor-traits-header",
                 ("points", points), ("traits", _traitCount),
-                ("maxTraits", _cfgManager.GetCVar(CCVars.GameTraitsMax)));
+                ("maxTraits", maxTraits));
 
             // Set the remove unusable button's label to have the correct amount of unusable traits
             TraitsRemoveUnusableButton.Text = Loc.GetString("humanoid-profile-editor-traits-remove-unusable-button",
@@ -2352,8 +2402,9 @@ namespace Content.Client.Lobby.UI
                 {
                     // Make sure they have enough trait points
                     preference = CheckPoints(preference ? selector.Trait.Points : -selector.Trait.Points, preference);
+
                     // Make sure they have enough trait slots
-                    preference = preference ? _traitCount < _cfgManager.GetCVar(CCVars.GameTraitsMax) : preference;
+                    preference = CheckSlots(preference ? selector.Trait.Slots : -selector.Trait.Slots, preference);
 
                     // Update Preferences
                     Profile = Profile?.WithTraitPreference(selector.Trait.ID, preference);
@@ -2367,6 +2418,13 @@ namespace Content.Client.Lobby.UI
             {
                 var temp = TraitPointsBar.Value + points;
                 return preference ? !(temp < 0) : temp < 0;
+            }
+
+            bool CheckSlots(int slots, bool preference)
+            {
+                var temp = _traitCount + slots;
+                var max = _cfgManager.GetCVar(CCVars.GameTraitsMax);
+                return preference ? !(temp > max) : temp > max;
             }
         }
 
@@ -2712,9 +2770,10 @@ namespace Content.Client.Lobby.UI
                 selector.PreferenceChanged += preference =>
                 {
                     // Make sure they have enough loadout points
-                    var selected = preference.Selected
-                        ? CheckPoints(-selector.Loadout.Cost, preference.Selected)
-                        : CheckPoints(selector.Loadout.Cost, preference.Selected);
+                    var wasSelected = Profile?.LoadoutPreferences
+                        .FirstOrDefault(it => it.LoadoutName == selector.Loadout.ID)
+                        ?.Selected ?? false;
+                    var selected = preference.Selected && (wasSelected || CheckPoints(-selector.Loadout.Cost, true));
 
                     // Update Preferences
                     Profile = Profile?.WithLoadoutPreference(
@@ -2733,7 +2792,7 @@ namespace Content.Client.Lobby.UI
             bool CheckPoints(int points, bool preference)
             {
                 var temp = LoadoutPointsBar.Value + points;
-                return preference ? !(temp < 0) : temp < 0;
+                return preference ? temp >= 0 : temp < 0;
             }
         }
 
