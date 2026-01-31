@@ -1,0 +1,24 @@
+- type: job
+  id: NCPDOfficer
+  name: Офицер полиции
+  description: job-description-ncpd-officer
+  playTimeTracker: JobNCPDOfficer
+  weight: 20
+  salary: 600
+  startingGear: NCPDOfficerGear
+  supervisors: job-supervisors-ncpd-sergeant
+  access:
+    - NCPD_Patrol
+    - NC_General
+
+- type: startingGear
+  id: NCPDOfficerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSecBlue
+    back: ClothingBackpackSecurity
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadHelmetBasic
+    ears: ClothingHeadsetAltSecurity
+    id: SecurityPDA
+    belt: ClothingBeltSecurityFilled
+    outerClothing: ClothingOuterArmorBasic

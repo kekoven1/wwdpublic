@@ -1,0 +1,28 @@
+- type: job
+  id: NCPDChief
+  name: Начальник департамента полиции
+  description: job-description-ncpd-chief
+  playTimeTracker: JobNCPDChief
+  weight: 10
+  salary: 1500
+  startingGear: NCPDChiefGear
+  supervisors: job-supervisors-centcom
+  access:
+    - NCPD_Command
+    - NCPD_Patrol
+    - NCPD_Armory
+    - NCPD_Detective
+    - NC_General
+
+- type: startingGear
+  id: NCPDChiefGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitSheriff
+    back: ClothingBackpackSatchelSecurity
+    shoes: ClothingShoesBootsJack
+    head: ClothingHeadHatBeretHoS
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetAltSecurity
+    id: HoSPDA
+    belt: ClothingBeltSecurityFilled
+    outerClothing: ClothingOuterCoatHoSTrench

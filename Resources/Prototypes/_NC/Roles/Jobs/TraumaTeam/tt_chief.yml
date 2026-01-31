@@ -1,0 +1,28 @@
+- type: job
+  id: TraumaTeamChief
+  name: Руководитель отдела Trauma Team
+  description: job-description-traumateam-chief
+  playTimeTracker: JobTraumaTeamChief
+  weight: 10
+  salary: 1500
+  startingGear: TraumaTeamChiefGear
+  supervisors: job-supervisors-centcom
+  access:
+    - Trauma_Command
+    - Trauma_Medical
+    - Trauma_Morgue
+    - Trauma_Hangar
+    - NC_General
+
+- type: startingGear
+  id: TraumaTeamChiefGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitCMO
+    back: ClothingBackpackSatchelMedical
+    shoes: ClothingShoesColorWhite
+    head: ClothingHeadHatBeretSeniorPhysician
+    eyes: ClothingEyesGlassesSunglasses
+    ears: ClothingHeadsetCMO
+    id: CMOPDA
+    belt: ClothingBeltMedicalFilled
+    outerClothing: ClothingOuterCoatLabCmo

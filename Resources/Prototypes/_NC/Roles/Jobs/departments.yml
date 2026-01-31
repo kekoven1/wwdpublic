@@ -1,0 +1,37 @@
+- type: department
+  id: CivilianNC
+  name: Гражданские
+  description: department-CivilianNC-description
+  color: "#999999"
+  roles:
+    - NCCitizen
+    - Reaper
+    - Fixer
+    - EdgeRunnerSolo
+
+- type: department
+  id: NCPD
+  name: NCPD
+  description: department-NCPD-description
+  color: "#1e90ff"
+  roles:
+    - NCPDChief
+    - NCPDWatchAgent
+    - NCPDSergeant
+    - NCPDOfficer
+    - NCPDCadet
+    - MaxTacCommander
+    - MaxTacOperative
+    - MaxTacNetrunner
+
+- type: department
+  id: TraumaTeam
+  name: Отдление TraumaTeam
+  description: department-TraumaTeam-description
+  color: "#e74c3c"
+  roles:
+    - TraumaTeamChief
+    - TraumaTeamDoctor
+    - TraumaTeamChemist
+    - TraumaTeamParamedic
+    - TraumaTeamOperative

@@ -1,0 +1,26 @@
+- type: job
+  id: MaxTacNetrunner
+  name: Нетраннер Макс-Так
+  description: job-description-maxtac-netrunner
+  playTimeTracker: JobMaxTacNetrunner
+  weight: 5
+  salary: 1200
+  startingGear: MaxTacNetrunnerGear
+  supervisors: job-supervisors-maxtac-commander
+  access:
+    - MaxTac_General
+    - MaxTac_Armory
+    - NCPD_Patrol
+    - NC_General
+
+- type: startingGear
+  id: MaxTacNetrunnerGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitResearchDirector
+    back: ClothingBackpackSatchelSecurity
+    shoes: ClothingShoesBootsCombatFilled
+    head: ClothingHeadHelmetHardsuitSecurity
+    ears: ClothingHeadsetAltSecurity
+    id: SciencePDA
+    belt: ClothingBeltSecurityFilled
+    outerClothing: ClothingOuterHardsuitSecurity

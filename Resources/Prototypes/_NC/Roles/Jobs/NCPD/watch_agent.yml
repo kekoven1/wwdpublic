@@ -1,0 +1,24 @@
+- type: job
+  id: NCPDWatchAgent
+  name: Агент Дозора
+  description: job-description-ncpd-watch-agent
+  playTimeTracker: JobNCPDWatchAgent
+  weight: 10
+  salary: 800
+  startingGear: NCPDWatchAgentGear
+  supervisors: job-supervisors-ncpd-chief
+  access:
+    - NCPD_Patrol
+    - NCPD_Detective
+    - NC_General
+
+- type: startingGear
+  id: NCPDWatchAgentGear
+  equipment:
+    jumpsuit: ClothingUniformJumpsuitDetective
+    back: ClothingBackpackSatchelSecurity
+    shoes: ClothingShoesColorBlack
+    head: ClothingHeadHatFedoraBrown
+    ears: ClothingHeadsetSecurity
+    id: DetectivePDA
+    outerClothing: ClothingOuterCoatDetective
