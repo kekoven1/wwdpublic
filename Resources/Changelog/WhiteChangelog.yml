@@ -5032,3 +5032,157 @@ Entries:
   id: 528
   time: '2026-01-28T17:26:47.0000000+00:00'
   url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1059
+- author: DDDecard
+  changes:
+    - type: Fix
+      message: Исправлен рендер тайлов и декалей для MapRender
+  id: 529
+  time: '2026-02-02T19:17:05.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1063
+- author: Spatison
+  changes:
+    - type: Add
+      message: Крюк-пушка и грави-пушка возвращены в игру
+  id: 530
+  time: '2026-02-08T12:59:27.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1065
+- author: Spatison
+  changes:
+    - type: Tweak
+      message: Потребление корабельных турелей было уменьшено.
+  id: 531
+  time: '2026-02-08T12:59:54.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1066
+- author: Spatison
+  changes:
+    - type: Tweak
+      message: Конструкты кровавого культа теперь светятся в темноте
+    - type: Fix
+      message: 'Меню выбора конструкта культа теперь корректно отображается '
+  id: 532
+  time: '2026-02-13T19:40:44.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1067
+- author: Spatison
+  changes:
+    - type: Add
+      message: Перенесен небольшой пак контента с виздена.
+  id: 533
+  time: '2026-02-14T22:29:25.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1071
+- author: Gersoon458
+  changes:
+    - type: Add
+      message: Новые спрайты огнестрела (Swebit)
+    - type: Add
+      message: >-
+        Дробовик Адъютант добавлен новый боковой контейнер для боезапаса.
+        Открывается на Е, доставать ручками, приоритет заполнения стоит у
+        магазина
+    - type: Add
+      message: >-
+        Новые спрайты коробок + новые коробки + их крафты + стейт открытого
+        состояния + рандом на спрайты больших коробок + новые иконки + стандарты
+        размеров инвентаря по размеру спрайта (Все коробки делятся на 3 основных
+        размера, а не как раньше в разнобой, но с вайтлистами)
+  id: 534
+  time: '2026-02-17T16:41:55.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1044
+- author: kekoven1
+  changes:
+    - type: Add
+      message: >-
+        добавлены Инфернал и Шадовкин как варианты типа псикастера в чертах
+        персонажа
+  id: 535
+  time: '2026-02-21T20:26:28.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1072
+- author: Spatison
+  changes:
+    - type: Add
+      message: Добавлен ручной телепортер, создающий портал к маячку.
+    - type: Tweak
+      message: Джетпаки теперь работают без гравитации
+    - type: Tweak
+      message: 'Дальность полета снаряда стационарного ракетомёта увеличена: 20 -> 120'
+    - type: Tweak
+      message: >-
+        Скорость полета снарядов стационарного орудия (за исключением
+        ракетомётов) увеличена: 25 -> 60
+  id: 536
+  time: '2026-03-06T10:13:42.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1076
+- author: Myaflic
+  changes:
+    - type: Fix
+      message: >-
+        Исправлены некоторые части UI в редакторе персонажей ||(старых
+        персонажей можно импортировать; поиск по всем лоадаутам . . . +1)||.
+    - type: Add
+      message: >-
+        Переводы редактора персонажей и всего меню лобби ||(кроме руководства и
+        панели администратора)|| и полезные фичи ||(скрытие недоступных
+        категорий; переключатель скрытия недоступных категорий; поле с пределом
+        максимального количества символов во флаворе для удобства написания
+        описания персонажа . . . +1)||.
+  id: 537
+  time: '2026-03-07T21:22:20.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1056
+- author: Spatison
+  changes:
+    - type: Tweak
+      message: >-
+        Корабельные турели удаленного контроля теперь имеют расширенный обзор и
+        способность прицеливаться
+    - type: Fix
+      message: Исправлен интерфейс сканера масс
+    - type: Fix
+      message: Псевдо 3д текстуры теперь не ломают реплеи
+  id: 538
+  time: '2026-03-08T13:24:54.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1080
+- author: Myaflic
+  changes:
+    - type: Tweak
+      message: Фелиниды теперь могут брать трейт «Несокрушимый».
+  id: 539
+  time: '2026-03-18T04:36:02.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1085
+- author: Sevasstyan
+  changes:
+    - type: Fix
+      message: Бесплатные пистолетные магазины в сб техфабе больше не бесплатные.
+  id: 540
+  time: '2026-03-18T11:49:30.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1087
+- author: SentryPrimies
+  changes:
+    - type: Add
+      message: >-
+        Добавлены новые спрайты Инженерному, Продвинотому Инженерному, и
+        Атмосферному хардсьюту.
+    - type: Remove
+      message: 'Удалены старые спрайты вышеприведённых скафандров '
+  id: 541
+  time: '2026-03-19T18:36:24.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1089
+- author: SentryPrimies
+  changes:
+    - type: Add
+      message: Добавлены новые спрайты старым инженерным комбинезонам
+  id: 542
+  time: '2026-03-24T16:57:18.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1091
+- author: SentryPrimies
+  changes:
+    - type: Add
+      message: Добавлены новые спрайты хранилищам скафандров
+  id: 543
+  time: '2026-03-24T16:57:47.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1092
+- author: kekoven1
+  changes:
+    - type: Add
+      message: добавлена псионная мощь "6аpокинeз"
+  id: 544
+  time: '2026-03-30T19:51:59.0000000+00:00'
+  url: https://github.com/WWhiteDreamProject/wwdpublic/pull/1086
